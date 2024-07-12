@@ -17,7 +17,7 @@ public class FollowPlayer : MonoBehaviour
         Debug.Log(collision.gameObject.tag);
 
         Debug.Log("Collision avec" + collision.gameObject.name);
-        if (collision.gameObject.name == "Npc")
+        if (collision.gameObject.tag == "Npc")
         {
             GetComponent<LifeAndScore>().Setlife(-1);
             Debug.Log("Collision avec Npc");
