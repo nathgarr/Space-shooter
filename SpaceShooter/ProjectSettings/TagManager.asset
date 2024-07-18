@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Npc
   - player
+  - PlayerShoot
+  - NpcShoot
   layers:
   - Default
   - TransparentFX

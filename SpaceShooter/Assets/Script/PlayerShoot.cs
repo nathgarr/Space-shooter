@@ -7,6 +7,9 @@ public class Shoot : MonoBehaviour
 {
     private SpriteRenderer playershoot ;
     public float speed = 10f;
+    /* float shoot = GameObject.CreatePrimitive(PrimitiveType type);*/
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,11 +19,11 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        shoot();
+        Shoots();
         Move();
     }
 
-    void shoot()
+    void Shoots()
     {
        
     }

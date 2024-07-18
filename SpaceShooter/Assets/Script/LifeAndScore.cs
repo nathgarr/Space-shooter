@@ -6,7 +6,6 @@ public class LifeAndScore : MonoBehaviour
 {
 
     public int life = 3;
-    public int NombreEnemieVaincu = 0;
     public GameObject[] LifesGO;
     public static bool gameover = false;
     
@@ -20,23 +19,23 @@ public class LifeAndScore : MonoBehaviour
         }
         else if (life < 0)
                 {
-            GameObject.Find("player").SetActive(false);
+            /*GameObject.Find("player").SetActive(false);*/
             gameover = true;
         }
     }
-    public void replay ()
+    public void Replay ()
     {
         life = 3;
-        restartlife();
+        Restartlife();
         gameover = false;
     }
 
-    private void restartlife()
+    private void Restartlife()
     {
-        for (int i = -1; i<LifesGO.Length; i++)
+        for (int i = 0; i<LifesGO.Length; i++)
         {
             LifesGO [i].SetActive(true);
-            GameObject.Find("player").SetActive(true);
+            /*GameObject.Find("player").SetActive(true);*/
         }
     }
 }

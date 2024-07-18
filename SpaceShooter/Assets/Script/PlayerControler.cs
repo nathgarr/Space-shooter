@@ -6,13 +6,28 @@ public class PlayerControler : MonoBehaviour
 {
     [SerializeField]
     float speed = 20f;
-   /* float shoot = GameObject.CreatePrimitive(PrimitiveType type);*/
- 
+    [SerializeField]
+    GameObject projectilePrefab;
 
+    float lastFire;
+    [SerializeField]
+    SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    List<Sprite> PlayerSprite;
     // Update is called once per frame
+    private float fixedDeltaTime;
+   
+    
     void Update()
     {
         Move();
+        if (Input.GetAxis("Fire")>0)
+        {
+
+            Fire();
+
+        }
     }
 
     void Move()
@@ -25,15 +40,35 @@ public class PlayerControler : MonoBehaviour
              pos.x = pos.x + (xAxis * speed * Time.deltaTime);
              pos.y = pos.y + (yAxix * speed * Time.deltaTime);
              transform.position = pos;
+            if (xAxis < 0)
+            {
+                spriteRenderer.sprite = PlayerSprite[1];
+            }
+            else if (xAxis == 0)
+            {
+                spriteRenderer.sprite = PlayerSprite[0];
+            }
+            else if (xAxis > 0)
+            {
+                spriteRenderer.sprite = PlayerSprite[2];
+            }
         }
         else if (LifeAndScore.gameover){
             if (Input.GetKeyDown(KeyCode.Space))
             {
-                GameObject.Find("player").GetComponent<LifeAndScore>().replay();
+                GameObject.Find("Player").GetComponent<LifeAndScore>().Replay();
             }
         }
         
     }
+    
+    void Fire()
+    {
+        GameObject projectilInstance=Instantiate(projectilePrefab);
+        projectilInstance.transform.position = transform.position;  
+        lastFire = Time.time;
+        projectilInstance.gameObject.tag = "PlayerShoot";
 
-
+        
+    }
 }
