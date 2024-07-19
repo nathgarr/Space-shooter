@@ -23,6 +23,11 @@ public class FollowPlayer : MonoBehaviour
             Debug.Log("Collision avec Npc");
           
         }
+        else if (collision.gameObject.tag == "NpcShoot")
+        {
+            GetComponent<LifeAndScore>().Setlife(-1);
+            Debug.Log("Collision avec NpcShoot");
+        }
     }
       /* private void OnTriggerEnter2D(Collider2D other)
     {

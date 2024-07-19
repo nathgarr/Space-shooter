@@ -40,6 +40,6 @@ public class NpcHp : MonoBehaviour
     public void NpcRevive()
     {
         NpcT1Life = 1;
-
+        
     }
 }
