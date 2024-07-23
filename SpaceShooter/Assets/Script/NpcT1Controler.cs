@@ -5,15 +5,24 @@ using UnityEngine.UIElements;
 
 public class NpcT1Controler : MonoBehaviour
 {
+    [SerializeField]
+    GameObject projectilePrefab;
+    [SerializeField]
+    LifeSystem lifeSystem;
     public GameObject start, end;
     public float decalX = 1f;
     public bool ToRight = true;
     public bool ToUp = true;
     public bool Isvertical = false;
     // Start is called before the first frame update
+    private void Awake()
+    {
+        lifeSystem.onKill =OnNpcKilled;
+    }
     void Start()
     {
         decalX = Random.Range(decalX,decalX+1f);
+        StartCoroutine(FireCorout());
     }
 
     // Update is called once per frame
@@ -65,5 +74,19 @@ public class NpcT1Controler : MonoBehaviour
             }
         }
     }
-    
+    IEnumerator FireCorout()
+    {
+        while (true)
+        {
+             float fireDelay = Random.Range(0.8f, 1.5f);
+            yield return new WaitForSeconds(fireDelay);
+            GameObject projectilInstance=Instantiate(projectilePrefab);
+           
+             projectilInstance.transform.position = transform.position;  
+        }
+    }
+    void OnNpcKilled()
+    {
+        gameObject.SetActive(false);
+    }
 }

@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7042334461103245706}
   - component: {fileID: 7746538180168477535}
-  - component: {fileID: 3017271756517875013}
   m_Layer: 0
   m_Name: Npc2
   m_TagString: Npc
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3017271756517875013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2573216386291623172}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71cc9dc739d2324484393fa38bda1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &7068636244608668307
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +96,7 @@ GameObject:
   - component: {fileID: 6493969076592289087}
   - component: {fileID: 8850984407760316809}
   - component: {fileID: 2770855958595277204}
+  - component: {fileID: 5367563113847213008}
   m_Layer: 0
   m_Name: NpcT2
   m_TagString: Npc
@@ -165,7 +152,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.007473886, y: -0.003169313}
+  m_Offset: {x: -0.0005694181, y: -0.0031692982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -176,7 +163,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6212652, y: 0.5123224}
+  m_Size: {x: 0.6074562, y: 0.5123224}
   m_EdgeRadius: 0
 --- !u!50 &8850984407760316809
 Rigidbody2D:
@@ -217,3 +204,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf30be05ec305e47bdac3da301d40b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5367563113847213008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7068636244608668307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a35c1065a0cb21c478a0e1598369b0ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NpcT2Life: 1

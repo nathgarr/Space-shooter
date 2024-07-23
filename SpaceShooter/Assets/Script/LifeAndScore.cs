@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class LifeAndScore : MonoBehaviour
 {
+    [SerializeField]
+    LifeSystem lifeSystem;
+    [SerializeField]
+    GameObject gameOverMenus;
 
-    public int life = 3;
     public GameObject[] LifesGO;
-    public static bool gameover = false;
-    
-    public void Setlife(int value)
+
+    private void Awake()
     {
-        life += value;
-        if (life >= 0)
+        lifeSystem.onKill = OnPlayerkill;
+        lifeSystem.onDmg = OnDmg;
+    }
+    public void OnDmg()
+    {
+        if (lifeSystem.life >= 0)
         {
-            LifesGO[life].SetActive(false);
-            Debug.Log("life - 1");
+            LifesGO[(int)lifeSystem.life].SetActive(false);
         }
-        else if (life < 0)
-                {
-            /*GameObject.Find("player").SetActive(false);*/
-            gameover = true;
-        }
+       
+        
     }
     public void Replay ()
     {
-        life = 3;
+        lifeSystem.ResetLife();
         Restartlife();
-        gameover = false;
     }
 
     private void Restartlife()
@@ -35,7 +36,11 @@ public class LifeAndScore : MonoBehaviour
         for (int i = 0; i<LifesGO.Length; i++)
         {
             LifesGO [i].SetActive(true);
-            /*GameObject.Find("player").SetActive(true);*/
         }
+    }
+    void OnPlayerkill()
+    {
+        Debug.Log("Le joueur est mort");
+        gameOverMenus.SetActive(true);
     }
 }

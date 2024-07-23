@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4782665847301380030}
   - component: {fileID: 3768276136088603099}
-  - component: {fileID: 165455649221890457}
   m_Layer: 0
   m_Name: Npc3
   m_TagString: Npc
@@ -85,19 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &165455649221890457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 874948853319869592}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71cc9dc739d2324484393fa38bda1f6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
 --- !u!1 &3107534583058433618
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +96,7 @@ GameObject:
   - component: {fileID: 8644425302388414266}
   - component: {fileID: 6776700962070074773}
   - component: {fileID: 1880924036775787560}
+  - component: {fileID: 8390085336893192184}
   m_Layer: 0
   m_Name: NpcT3
   m_TagString: Npc
@@ -217,3 +204,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cf30be05ec305e47bdac3da301d40b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8390085336893192184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107534583058433618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b496c40a9128f59478d01c5601e14c9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NpcT1Life: 1

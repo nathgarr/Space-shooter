@@ -15,10 +15,14 @@ public class PlayerControler : MonoBehaviour
 
     [SerializeField]
     List<Sprite> PlayerSprite;
+    [SerializeField]
+    LifeSystem lifeSystem;
     // Update is called once per frame
     private float fixedDeltaTime;
-   
-    
+
+    public float fireRate = 0.5f;
+    private float nextFire = 0.0f;
+
     void Update()
     {
         Move();
@@ -32,7 +36,7 @@ public class PlayerControler : MonoBehaviour
 
     void Move()
     {
-        if (!LifeAndScore.gameover)
+        if (lifeSystem.isAlive)
         {
              float xAxis = Input.GetAxis("Horizontal");
              float yAxix = Input.GetAxis("Vertical");
@@ -53,22 +57,29 @@ public class PlayerControler : MonoBehaviour
                 spriteRenderer.sprite = PlayerSprite[2];
             }
         }
-        else if (LifeAndScore.gameover){
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameObject.Find("Player").GetComponent<LifeAndScore>().Replay();
-            }
-        }
         
     }
     
     void Fire()
     {
-        GameObject projectilInstance=Instantiate(projectilePrefab);
+
+         /*  GameObject projectilInstance=Instantiate(projectilePrefab);
+         *  V1
         projectilInstance.transform.position = transform.position;  
         lastFire = Time.time;
-        projectilInstance.gameObject.tag = "PlayerShoot";
+        projectilInstance.gameObject.tag = "PlayerShoot";*/
+         //V2
+        if (Input.GetButton("Fire") && Time.time > nextFire)
+        {
+            lastFire = Time.time;
+            nextFire = Time.time + fireRate;
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
+            projectilePrefab.gameObject.tag = ("PlayerShoot");
+            if ( lastFire == 3f)
+            {
+                Destroy(projectilePrefab);
+            }
+        }
 
-        
     }
 }

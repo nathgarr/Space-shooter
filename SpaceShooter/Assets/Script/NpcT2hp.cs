@@ -4,17 +4,22 @@ using UnityEngine;
 
 public class NpcT2hp : MonoBehaviour
 {
-    public int NpcT2Life = 1;
+    public int NpcT1VariantLife = 1;
+    /*public int NpcT2Life = 2;
+    public int NpcT3Life = 3;*/
     public void SetNpcLife2(int value)
     {
-        NpcT2Life += value;
-        if (NpcT2Life > 0)
+        NpcT1VariantLife += value;
+        if (NpcT1VariantLife > 0)
         {
-            NpcT2Life = (NpcT2Life - value);
+            NpcT1VariantLife = (NpcT1VariantLife - value);
         }
-        else if (NpcT2Life == 0)
+        else if (NpcT1VariantLife == 0)
         {
-            GameObject.Find("NpcT2").SetActive(false);
+            GameObject.Find("NpcT1Variant").SetActive(false);
+
+
+            /*SetTextNpc(1);*/
         }
+         }
     }
-}
