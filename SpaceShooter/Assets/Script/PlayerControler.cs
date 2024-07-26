@@ -62,7 +62,6 @@ public class PlayerControler : MonoBehaviour
     
     void Fire()
     {
-
          /*  GameObject projectilInstance=Instantiate(projectilePrefab);
          *  V1
         projectilInstance.transform.position = transform.position;  
@@ -75,7 +74,7 @@ public class PlayerControler : MonoBehaviour
             nextFire = Time.time + fireRate;
             Instantiate(projectilePrefab, transform.position, transform.rotation);
             projectilePrefab.gameObject.tag = ("PlayerShoot");
-            if ( lastFire == 3f)
+            if ( lastFire == 1f)
             {
                 Destroy(projectilePrefab);
             }

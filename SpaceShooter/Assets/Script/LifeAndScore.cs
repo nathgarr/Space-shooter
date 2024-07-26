@@ -8,6 +8,7 @@ public class LifeAndScore : MonoBehaviour
     LifeSystem lifeSystem;
     [SerializeField]
     GameObject gameOverMenus;
+    public float numberNpcKilled = 0;
 
     public GameObject[] LifesGO;
 

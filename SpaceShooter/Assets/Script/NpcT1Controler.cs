@@ -78,7 +78,7 @@ public class NpcT1Controler : MonoBehaviour
     {
         while (true)
         {
-             float fireDelay = Random.Range(0.8f, 1.5f);
+             float fireDelay = Random.Range(0.5f, 2f);
             yield return new WaitForSeconds(fireDelay);
             GameObject projectilInstance=Instantiate(projectilePrefab);
            

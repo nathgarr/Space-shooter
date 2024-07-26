@@ -90,9 +90,9 @@ MonoBehaviour:
   projectilePrefab: {fileID: 237864943372097015, guid: c483df145cf0ffe429ade16c80739fa2, type: 3}
   spriteRenderer: {fileID: 8440848749896243700}
   PlayerSprite:
-  - {fileID: 758818688, guid: 6d039131ad2b6da42b278544847d2b1e, type: 3}
-  - {fileID: -662147756, guid: 6d039131ad2b6da42b278544847d2b1e, type: 3}
-  - {fileID: 624820867, guid: 6d039131ad2b6da42b278544847d2b1e, type: 3}
+  - {fileID: -372748243, guid: 866ef4e24c4e7264f9deb34ee5991e7e, type: 3}
+  - {fileID: 1145497651, guid: 866ef4e24c4e7264f9deb34ee5991e7e, type: 3}
+  - {fileID: -127225376, guid: 866ef4e24c4e7264f9deb34ee5991e7e, type: 3}
   lifeSystem: {fileID: 651548387379259784}
   fireRate: 0.5
 --- !u!114 &8494028614770187187
@@ -109,6 +109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifeSystem: {fileID: 651548387379259784}
   gameOverMenus: {fileID: 0}
+  numberNpcKilled: 0
   LifesGO:
   - {fileID: 8734860734257796644}
   - {fileID: 8265771672528099608}
@@ -467,12 +468,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 758818688, guid: 6d039131ad2b6da42b278544847d2b1e, type: 3}
+  m_Sprite: {fileID: -372748243, guid: 866ef4e24c4e7264f9deb34ee5991e7e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.49, y: 0.51}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

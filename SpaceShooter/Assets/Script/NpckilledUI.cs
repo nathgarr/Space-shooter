@@ -5,16 +5,24 @@ using UnityEngine.UI;
 public class NpckilledUI : MonoBehaviour
 {
     public Text NpcKilled;
- 
+    public static NpckilledUI I;
+    public float numberNpcKilled = 0;
+
     // Start is called before the first frame update
     void Start()
     {
-        NpcKilled.text = "x0";
+        NpcKilled.text = "x0 NpcKilled";
+        I = this;
+    }
+
+    private void Update()
+    {
+        SetTextNpc();
     }
 
     // Update is called once per frame
-    public void SetTextNpc(int value)
+    public void SetTextNpc()
     {
-        NpcKilled.text = "x" + value.ToString();
+        NpcKilled.text = "x" + numberNpcKilled.ToString() + "NpcKilled";
     }
 }

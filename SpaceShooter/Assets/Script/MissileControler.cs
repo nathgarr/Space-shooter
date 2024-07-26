@@ -15,7 +15,7 @@ public class MissileControler : MonoBehaviour
     [SerializeField]
     Vector3 moveDirection = Vector3.up;
     [SerializeField]
-    float lifeTime = 5f;
+    float lifeTime = 2f;
     /* float shoot = GameObject.CreatePrimitive(PrimitiveType type);*/
 
 
