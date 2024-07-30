@@ -188,7 +188,7 @@ MonoBehaviour:
   lifeSystem: {fileID: 6386255818265695425}
   start: {fileID: 2137462085414258103}
   end: {fileID: 7381877018567791949}
-  decalX: 1
+  decalX: 3
   ToRight: 1
   ToUp: 1
   Isvertical: 0

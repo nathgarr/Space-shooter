@@ -98,11 +98,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b1679832b78f0c42a61e1da71aaf55b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 10
   ShootDmg: 1
   targetType: 1
   moveDirection: {x: 0, y: 1, z: 0}
-  lifeTime: 5
+  lifeTime: 2
 --- !u!70 &3303630173095921047
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

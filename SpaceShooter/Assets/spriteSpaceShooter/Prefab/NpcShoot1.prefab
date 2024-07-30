@@ -134,7 +134,7 @@ MonoBehaviour:
   ShootDmg: 1
   targetType: 0
   moveDirection: {x: 0, y: -1, z: 0}
-  lifeTime: 5
+  lifeTime: 2
 --- !u!58 &2704070979486419440
 CircleCollider2D:
   m_ObjectHideFlags: 0

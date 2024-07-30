@@ -11,7 +11,7 @@ public class NpckilledUI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NpcKilled.text = "x0 NpcKilled";
+        NpcKilled.text = "x0 Npc Killed";
         I = this;
     }
 
@@ -23,6 +23,6 @@ public class NpckilledUI : MonoBehaviour
     // Update is called once per frame
     public void SetTextNpc()
     {
-        NpcKilled.text = "x" + numberNpcKilled.ToString() + "NpcKilled";
+        NpcKilled.text = "x" + numberNpcKilled.ToString() + "Npc Killed";
     }
 }

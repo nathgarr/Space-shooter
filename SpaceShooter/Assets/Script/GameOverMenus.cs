@@ -15,24 +15,4 @@ public class GameOverMenus : MonoBehaviour
     {
         SceneManager.LoadScene("MainMenu");
     }
-  
-    // Start is called before the first frame update
-/*       void Start()
-    {
-
-    }
-    public void LoadGame()
-    {
-        // chargement de la scene de jeux
-        SceneManager.LoadScene(0);
-    }
-    public void Quit()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#endif
-#if UNITY_STANDALONE
-        Application.Quit();
-#endif
-    }*/
 }
